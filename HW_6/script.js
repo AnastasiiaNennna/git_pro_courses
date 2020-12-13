@@ -7,32 +7,27 @@ const questionnaire = [
     {
         type: PROMPT_QUESTION,
         question: 'Сколько будет 2+2?',
-        answer: '4',
-        
+        answer: '4',        
     },
     {
         type: CONFIRM_QUESTION,
         question: 'Солнце встает на востоке?',
-        answer: false,
-        
+        answer: false,        
     },
     {
         type: PROMPT_QUESTION,
         question: 'Сколько будет 5 / 0?',
-        answer: 'infinity',
-        
+        answer: 'infinity',        
     },
     {
         type: PROMPT_QUESTION,
         question: 'Какого цвета небо?',
-        answer: 'голубого',
-        
+        answer: 'голубого',        
     },
     {
         type: PROMPT_QUESTION,
         question: 'Как правильный ответ на главный вопрос жизни, вселенной и всего такого.' ,
-        answer: '42',
-        
+        answer: '42',        
     },
 ];
 
