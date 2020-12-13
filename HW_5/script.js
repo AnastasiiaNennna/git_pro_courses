@@ -40,6 +40,6 @@ function averageStudentMark(id) {
     };
 };
 
-averageStudentMark(10); 
+console.log(averageStudentMark(10)); 
 
-averageGroupMark(students);
+console.log(averageGroupMark(students));
