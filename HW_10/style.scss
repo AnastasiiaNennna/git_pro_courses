@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Marck+Script&display=swap');
+
+// font-family: 'Gabriela', serif;
+// font-family: 'Marck Script', cursive;
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+};
+
+body {
+    background-color: #030d1f;
+};
+
+div {
+    padding: 7px;
+    text-align: center;
+};
+
+ul {
+    list-style: none;
+    margin: 10px;
+    overflow-wrap: break-word;
+};
+
+li {
+    padding: 10px 5px;
+    font-family: 'Marck Script', cursive;
+    font-size: 1.7rem;
+    border-radius: 20px;
+    min-height: 30px;
+    margin: 7px;
+};
+
+h1 {
+    text-align: center;
+    font-family: 'Gabriela', serif;
+    font-size: 2.2rem;
+    color: #e8e162fc;
+    border-radius: 20px;
+    min-height: 70px;
+    padding-top: 15px;
+    margin-bottom: 7px;
+};
+
+input {
+    width: 146%;
+    border: 1px solid #000;
+    height: 50px;
+    padding: 15px 5px;
+    border-radius: 10px;
+    font-family: 'Marck Script', cursive;
+    font-size: 1.7rem; 
+    &::placeholder{
+        color: #e7e7e78f;
+        text-align: center
+    };
+};
+
+button {
+    width: 130%;
+    border: 1px solid #000;
+    margin-left: 1px;
+    height: 50px;
+    border-radius: 10px;
+    font-family: 'Marck Script', cursive;
+    font-size: 1.7rem;
+};
+
+.addNewContact,
+.userPhonebookList, 
+.userPhonebookTitle {
+    border-radius: 20px;
+    min-height: 70px;
+    padding: 10px;
+    display: inline-flex;
+    width: 90%;
+    justify-content: space-evenly
+};
+
+.userPhonebookList, 
+.userPhonebookTitle {
+    background-color: #3d452e;
+    li {
+        width: 154%;
+        border: 1px solid #23251c;
+        height: 50px;
+        border-radius: 10px;
+        font-family: 'Marck Script', cursive;
+        font-size: 1.7rem; 
+        background: #545c40;
+        color: #fff4bc;
+    };
+    button {
+        background: #1C2617;
+        border-color: #030502;
+        color: #bdbaab;
+        margin-top: 7px;
+    }
+};
+
+.addNewContact {
+    background-color: #2e1c1c;
+    input {
+        background: #704f3d;
+        border-color: #9e733c69;
+        color: #fad195;
+    };
+    button {
+        background: #1a0b03;
+        border-color: #311f07;
+        color: #eee6d9;
+    }
+};
+
+.userPhonebookTitle {
+    background-color: #697552;
+
+    :first-child {
+        width: 124%;
+    }
+    li {
+        width: 154%;
+        border: 1px solid #23251c;
+        height: 50px;
+        border-radius: 10px;
+        font-family: 'Gabriela', serif;;
+        font-size: 1.3rem; 
+        background: #4a503c;
+        color: #fff4bc;
+    };
+}
