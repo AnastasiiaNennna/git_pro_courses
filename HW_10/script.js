@@ -15,7 +15,7 @@ function addOnBtnClick() {
     } else {
         alert('Fill in all contact details');
     };
-};
+}
 
 function addNewTask() {
     let phonebookEl = document.createElement('ul');
