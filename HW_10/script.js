@@ -6,18 +6,18 @@ let contactPhoneEl = document.querySelector('#contactPhone');
 let contactEmailEl = document.querySelector('#contactEmail');
 let addContactEl = document.querySelector('#addContact');
 
-addContactEl.addEventListener('click', addOnBtnClick);
+addContactEl.addEventListener('click', onAddBtnClick);
 
-function addOnBtnClick() {
-    if (contactNameEl.value && contactPhoneEl.value && contactEmailEl.value) {
-        addNewTask();
+function onAddBtnClick() {
+    if (isInputValid()) {
+        addNewContact();
         clearInput();
     } else {
         alert('Fill in all contact details');
     };
 }
 
-function addNewTask() {
+function addNewContact() {
     let phonebookEl = document.createElement('ul');
     phonebookEl.className = 'userPhonebookList';
     phonebook.append(phonebookEl);
@@ -46,3 +46,7 @@ function clearInput() {
     contactPhoneEl.value = '';
     contactEmailEl.value = '';
 };
+
+function isInputValid() {
+   return contactNameEl.value && contactPhoneEl.value && contactEmailEl.value;
+}
