@@ -1,7 +1,8 @@
 'use strict'
 
 const DELETE_BTN_CLASS = 'delete-btn';
-const TO_DO_TASK_ROW = '.to-do-item';
+const TO_DO_TASK_CLASS = 'to-do-item'
+const TO_DO_TASK_SELECTOR = '.' + TO_DO_TASK_CLASS;
 const COMPLETE_TASK_CLASS = 'done';
 
 const toDoTemplate = document.querySelector('#toDoTemplate').innerHTML;
@@ -10,24 +11,21 @@ const toDolist = document.querySelector('#toDolist');
 const toDoForm = document.querySelector('#toDoForm');
 
 toDoForm.addEventListener('submit', onToDoFormSubmit);
-toDolist.addEventListener('click', onToDoBtnClick);
-toDolist.addEventListener('click', onToDoTaskClick);
+toDolist.addEventListener('click', onToDoListClick);
 
 function onToDoFormSubmit(e) {
     e.preventDefault();
     createTaskElement(toDoInput);
 };
 
-function onToDoBtnClick(e) {
-    if (getDeleteBtn(e.target)){
-        const toDoTaskItem = getToDoTaskRow(e.target);
-        deleteToDoTask(toDoTaskItem);
-    };
-};
-
-function onToDoTaskClick(e) {
-    e.preventDefault();
-    getCompletedTask(e.target);
+function onToDoListClick(e) {
+    const toDoTaskItem = getToDoTaskRow(e.target);
+    switch (true) {
+        case (isDeleteBtn(e.target)):
+            return deleteToDoTask(toDoTaskItem);
+        case (isTaskItem(e.target)):
+            return toggleTask(e.target);
+    }
 };
 
 function createTaskElement(inp) {
@@ -66,18 +64,22 @@ function resetForm() {
     toDoForm.reset();
 };
 
-function getDeleteBtn(el) {
+function isDeleteBtn(el) {
     return el.classList.contains(DELETE_BTN_CLASS);
 };
 
+function isTaskItem(el) {
+    return el.classList.contains(TO_DO_TASK_CLASS);
+};
+
 function getToDoTaskRow(el) {
-    return el.parentElement.closest(TO_DO_TASK_ROW);
+    return el.parentElement.closest(TO_DO_TASK_SELECTOR);
 };
 
 function deleteToDoTask(el) {
     el.remove();
 };
 
-function getCompletedTask(el) {
+function toggleTask(el) {
     return el.classList.toggle(COMPLETE_TASK_CLASS);
 };
