@@ -25,7 +25,7 @@ function onToDoListClick(e) {
             return deleteToDoTask(toDoTaskItem);
         case (isTaskItem(e.target)):
             return toggleTask(e.target);
-    }
+    };
 };
 
 function createTaskElement(inp) {
