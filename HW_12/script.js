@@ -3,22 +3,22 @@
 function Calculator(baseNum) {
     this.base = baseNum;
     this.add = function(num) {
-        return (num >= 0) ? baseNum = baseNum + num : null;
+        return (num >= 0) ? this.base = this.base + num : null;
     };
     this.sub = function(num) {
-        return (num >= 0) ? baseNum = baseNum - num : null;
+        return (num >= 0) ? this.base = this.base - num : null;
     };
     this.mult = function(num) {
-        return (num >= 0) ? baseNum = baseNum * num : null;
+        return (num >= 0) ? this.base = this.base * num : null;
     };
     this.div = function(num) {
-        return (num >= 0) ? baseNum = baseNum / num : null;
+        return (num >= 0) ? this.base = this.base / num : null;
     };
     this.set = function(num) {
-        return (num >= 0) ? baseNum = num : null;
+        return (num >= 0) ? this.base = num : null;
     };
     this.get = function() {
-        return baseNum;
+        return this.base;
     };
 };
 
