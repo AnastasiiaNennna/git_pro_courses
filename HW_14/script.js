@@ -27,9 +27,8 @@ class Student{
 };
 
 const feGroup = new Group();
-const first = new Student('John Doe', [10, 10, 7]);
 
-feGroup.addStudent(first);
+feGroup.addStudent(new Student('John Doe', [10, 10, 7]));
 feGroup.addStudent(new Student('Alex Smith', [10, 9, 8]));
 feGroup.addStudent(new Student('Bob Johnson', [9, 10, 10, 8]));
 
