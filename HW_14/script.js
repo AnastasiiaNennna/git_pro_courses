@@ -45,7 +45,8 @@ feGroup.addStudent(thirdStudent);
 
 console.log(feGroup._students);
 console.log(feGroup.getAverageMark(this._students, 'marks'));
+console.log(`Front-End Group avarage mark is ${feGroup.getAverageMark(this._students, 'marks')}`);
 
-console.log(firstStudent.getAverageStudentMark(this.marks));
-console.log(secondStudent.getAverageStudentMark(this.marks));
-console.log(thirdStudent.getAverageStudentMark(this.marks));
+console.log(`${firstStudent.name} avarage mark is ${firstStudent.getAverageStudentMark(this.marks)}`);
+console.log(`${secondStudent.name} avarage mark is ${secondStudent.getAverageStudentMark(this.marks)}`);
+console.log(`${thirdStudent.name} avarage mark is ${thirdStudent.getAverageStudentMark(this.marks)}`);
