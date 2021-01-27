@@ -17,8 +17,6 @@ class Group {
         let groupMarks = this._students.flatMap(({marks}) => marks);
         return groupMarks.reduce((sum, item) => sum + item)/groupMarks.length;
     };
-
-
 };
 
 class Student{
