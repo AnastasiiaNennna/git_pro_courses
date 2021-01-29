@@ -1,0 +1,44 @@
+#container {
+  position: relative;
+  display: flex;
+  width: 75%;
+  height: 300px;
+  margin: 30px auto;
+  background-color: #f1a8eff3;
+  border: 1px solid #81388162;
+  border-radius: 3px;
+}
+
+body {
+  background-color: #f8c2eba2;
+}
+
+.tabset-item-title {
+  color: #747074;
+  margin: 2px;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #dbf18ac9;
+  border-radius: 10px;
+}
+
+.tabset-item-body {
+  padding: 30px 2px;
+  margin: 2px;
+  display: none;
+  background-color: #e7f0cecb;
+  border-radius: 3px;
+}
+
+.tabset-item-body.open {
+  display: block;
+  width: 98%;
+  position: absolute;
+  left: 0;
+}
+
+.active {
+  color: #000;
+  border: 1px solid rgb(245, 245, 164);
+  background-color: #f1d03fcc;
+}
