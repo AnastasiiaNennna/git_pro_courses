@@ -99,7 +99,9 @@ function toggleTask(elId) {
 
 
 function deleteTodoTask(elId, taskEl) {
-    todoList.splice(elId, 1);
+    let todo = todoList.find((todo) => todo.id === elId);
+    let todoId = todoList.indexOf(todo)
+    todoList.splice(todoId, 1);
     taskEl.remove();
 };
 
