@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/normalize.css" />
+        <link rel="stylesheet" href="../css/skeleton.css" />
+        <link rel="stylesheet" href="../css/dark-theme.css" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="resourse.js" defer></script>
+        <script src="app.js" defer></script>
+        <title>Phonebook</title>
+    </head>
+    <body>
+        <div class="container">
+            <div id="phonebook-wrapper">
+                <h1>Phonebook:</h1>
+                <div class="phonebookTitle row u-full-width">
+                    <div class="three columns u-full-width">Name</div>
+                    <div class="three columns u-full-width">Surname</div>
+                    <div class="three columns u-full-width">Phone</div>
+                </div>
+                <div id="phonebook"></div>
+            </div>
+            <form id="contactForm" class="form">
+                <input
+                    id="contactName"
+                    class="form-input"
+                    type="text"
+                    placeholder="Enter contact name"
+                />
+                <input
+                    id="contactSurname"
+                    class="form-input"
+                    type="text"
+                    placeholder="Enter contact surname"
+                />
+                <input
+                    id="contactPhone"
+                    class="form-input"
+                    type="tel"
+                    placeholder="Enter contact phone"
+                />
+                <input id="contactId" class="hidden" type="text" />
+                <input
+                    type="submit"
+                    class="u-full-width two columns"
+                    value="Add"
+                />
+            </form>
+            <script type="text/template" id="contactItemTemplate">
+                <div class="contactItem" data-id="{{id}}">
+                    <div type="button" class="edit-btn phonebook-el one column">Edit</div>
+                    <div class="phonebook-el three columns u-full-width">{{name}}</div>
+                    <div class="phonebook-el three columns u-full-width">{{surname}}</div>
+                    <div class="phonebook-el three columns u-full-width">{{phone}}</div>
+                    <div type="button" class="delete-btn phonebook-el one column">x</div>
+                </div>
+            </script>
+        </div>
+    </body>
+</html>
