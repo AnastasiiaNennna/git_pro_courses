@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+}
+
+#albums-wrapper {
+    /* margin: 5px; */
+    width: 300px;
+}
+
+#photos-wrapper {
+    margin: 5px;
+    display: grid;
+    height: auto;
+    width: 640px;
+    grid-template: auto / repeat(4, 1fr);
+}
+
+.album-item {
+    background-color: #5f9ea08f;
+    margin: 5px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
