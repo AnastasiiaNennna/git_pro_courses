@@ -72,6 +72,6 @@ function renderPhotos(list) {
 
 function getPhotoHtml(item) {
     return photosTemplate.replace('{{id}}', item.id)
-                        .replace('{{url}}', item.url)
+                        .replace('{{url}}', item.thumbnailUrl)
                         .replace('{{title}}', item.title)
 }
