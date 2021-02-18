@@ -1,0 +1,74 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #acaca7b8;
+    border-radius: 3px;
+    background-color: #6a6a68bb;
+}
+
+.row {
+    position: relative;
+}
+
+.header-button {
+    float: right;
+    margin: 10px;
+    background-color: #439a6f;
+}
+
+.header-button:hover {
+    background-color: #d8bfd8;
+    color: #000;
+    border-color: #000;
+}
+
+#stickersBoard {
+    width: 100%;
+    background-color: #6b6f6f;
+    height: auto;
+    display: grid;
+    grid-template: auto / repeat(4, 1fr);
+}
+
+.sticker-item {
+    margin: 5px;
+    background-color: #e9cd7abd;
+    border: 1px solid #ffffff78;
+    border-radius: 2px;
+}
+
+.sticker-title-wrap {
+    position: relative;
+}
+
+.sticker-title {
+    margin: 2px;
+    color: black;
+    text-align: center;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 10px;
+    color: #2f4f4f;
+    font-weight: bold;
+}
+
+.delete-btn:hover {
+    transform: scale(2);
+    cursor: pointer;
+}
+
+form {
+    margin-bottom: 0;
+}
+
+textarea {
+    background-color: #f0ffff54;
+    width: -webkit-fill-available;
+    margin: 3px;
+    min-height: 150px;
+    color: #4a4abb;
+}
