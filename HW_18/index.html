@@ -11,7 +11,7 @@
     <title>To Do List</title>
 </head>
 <body>
-    <div class="container">
+    <form class="container">
         <h1 class="to-do-title">Create your To Do List:</h1>
         <div id="todoList"></div>
         <form id="todoForm" class="row">
@@ -22,7 +22,7 @@
                 placeholder="Type what you want to do"
             />
             <button id="addToDo" class="two columns"> ADD </button>
-        </div>
+        </form>
         <script type="text/template" id="todoItemTemplate">
             <div class="to-do-item {{doneClass}}" data-id="{{id}}">
                 {{task}}

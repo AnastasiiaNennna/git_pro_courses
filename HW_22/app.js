@@ -34,17 +34,17 @@ const $formModal = $('#formModal').dialog({
         Cancel: closeModal,
     },
     show: {
-        effect: "drop",
+        effect: 'drop',
         duration: 400
     },
     hide: {
-        effect: "clip",
+        effect: 'clip',
         duration: 400
     },
     close: resetForm,
 });
 
-$formModal.find('form').on( "submit", ((e) => {
+$formModal.find('form').on('submit', ((e) => {
     e.preventDefault();
     saveContact();
     closeModal();
@@ -52,7 +52,7 @@ $formModal.find('form').on( "submit", ((e) => {
 
 $('#addContactBtn').on('click', onAddBtnClick);
 $phonebookEl.on('click', DELETE_BTN_SELECTOR, onDeleteBtnClick)
-            .on('click', EDIT_BTN_SELECTOR, onEditBtnClick)
+    .on('click', EDIT_BTN_SELECTOR, onEditBtnClick)
 
 let contactList = [];
 
@@ -101,24 +101,24 @@ function renderContacts(list) {
 
 function getContactHtml(contact) {
     return $contactItemTemplate.replace('{{id}}', contact.id)
-                            .replace('{{name}}', contact.name)
-                            .replace('{{surname}}', contact.surname)
-                            .replace('{{phone}}', contact.phone)
+        .replace('{{name}}', contact.name)
+        .replace('{{surname}}', contact.surname)
+        .replace('{{phone}}', contact.phone)
 };
 
-function getContactId (el) {
+function getContactId(el) {
     return $(el).closest(CONTACT_SELECTOR).data('id');
 };
 
 function deleteContact(id) {
-    contactList.filter(contact => contact.id !== id);
+    // contactList.filter(contact => contact.id !== id);
     contactsResourse.delete(id);
     const $el = getContactElement(id);
     $el && $el.remove();
 };
 
 function getContactElement(id) {
-    return $phonebookEl.find(`[data-id="${id}"]`);
+    return $phonebookEl.find(`[data-id='${id}']`);
 };
 
 function editContact(id) {
@@ -128,9 +128,9 @@ function editContact(id) {
 };
 
 function fillContactForm(contact) {
-    return $contactIdInput.val(contact.id), 
-        $contactNameInput.val(contact.name), 
-        $contactSurnameInput.val(contact.surname), 
+    return $contactIdInput.val(contact.id),
+        $contactNameInput.val(contact.name),
+        $contactSurnameInput.val(contact.surname),
         $contactPhoneInput.val(contact.phone);
 };
 
@@ -144,7 +144,8 @@ function saveContact() {
 };
 
 function getContactData() {
-    return {...EMPTY_CONTACT,
+    return {
+        ...EMPTY_CONTACT,
         id: $('#contactId').val(),
         name: $('#contactName').val(),
         surname: $('#contactSurname').val(),
@@ -155,16 +156,16 @@ function getContactData() {
 function updateContact(id, contact) {
     contactsResourse.update(id, contact);
     contactList = contactList.map((el) => el.id == contact.id ? contact : el);
-    getContactElement(contact.id).replaceWith(getContactHtml(contact))  ;
+    getContactElement(contact.id).replaceWith(getContactHtml(contact));
 };
 
 function createContact(contact) {
-    if (isFormValid()){
+    if (isFormValid()) {
         contactsResourse.create(contact)
-        .then(data => {
-            contactList.push(data);
-            $phonebookEl.append(getContactHtml(data));
-        });
+            .then(data => {
+                contactList.push(data);
+                $phonebookEl.append(getContactHtml(data));
+            });
     } else {
         openDialog();
     };
@@ -177,11 +178,11 @@ function isFormValid() {
 function openDialog() {
     $('#dialog').dialog({
         show: {
-            effect: "bounce",
+            effect: 'bounce',
             duration: 300,
         },
         hide: {
-            effect: "fold",
+            effect: 'fold',
             duration: 400,
         },
     });
