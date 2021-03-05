@@ -44,7 +44,7 @@ function vendorCss() {
 }
 
 function watchFiles() {
-    watch(('.src/**/*.js', { events: 'all'}, copyJs))
+    watch('./src/**/*.js', { events: 'all'}, copyJs)
 }
 
 module.exports = {
